@@ -1,0 +1,224 @@
+/* RESET */
+body, a, p, ul, h1{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+    &-track-piece {
+        background-color: #EEE;
+    }
+    &-thumb:vertical, &-thumb:horizontal {
+        background-color: #cfd0d1
+    }
+    &-thumb:vertical:hover, &-thumb:horizontal:hover {
+        background-color: #929292
+    }
+}
+
+nav{
+    margin: 10px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            margin-right: 20px;
+            text-transform: uppercase;
+            color: #878787;
+            font-weight: 100;
+            font-size: 20px;
+            cursor: pointer;
+            &:first-child{
+                cursor: auto;
+            }
+            i{
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.bg{
+    &-01{
+        width: 100%;
+        min-width: auto;
+        height: auto;
+        min-height: 600px;
+        background-color: #fff;
+        background-image: -webkit-linear-gradient(288deg, #fff 40%, #90E8FC 40%);
+        padding-bottom: 60px;
+    }
+}
+
+.home{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "nome foto"
+    "ch ch";
+    .nome{
+        align-content: center;
+        font-size: 80px;
+        font-weight: 900;
+        width: 200px;
+        line-height: 1em;
+        align-self: center;
+        justify-self: center;
+        grid-area: nome;
+        color: #878787;
+    }
+    .img{
+        background-image: url(http://127.0.0.1:5500/advex.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 100%;
+        width: 400px;
+        height: 400px;
+        justify-self: center;
+        grid-area: foto;
+        align-self: end;
+    }
+    .ch{
+        font-size: 30px;
+        grid-area: ch;
+        justify-self: center;
+        width: 700px;
+        margin-top: 80px;
+        color: white;
+        font-weight: bold;
+        p{
+            margin: 30px;
+        }
+    }
+}
+
+.sobre{
+    display: flex;
+    justify-content: space-around;
+    background-image: -webkit-linear-gradient(90deg, #fff 80%, #90E8FC 80%);
+    .adv{
+
+        &1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .img{
+                background-image: url(advex02.jpg);
+                background-position: center;
+                background-size: cover;
+                border-radius: 100%;
+                width: 250px;
+                height: 250px;
+                border: 5px solid white;
+            }
+            .nome{
+                font-size: 30px;
+                color: #00A3FF;
+                font-weight: bold;
+                margin: 10px 0px 20px 0px;
+            }
+            .desc{
+                width: 350px;
+                line-height: 1.5em;
+                background-color: #EDEDED;
+                color: #878787;
+                border-radius: 10px;
+                padding: 20px;
+                font-size: 17px;
+            }
+        }
+        &2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .img{
+                background-image: url(advex03.jpg);
+                background-position: center;
+                background-size: cover;
+                border-radius: 100%;
+                width: 250px;
+                height: 250px;
+                border: 5px solid white;
+            }
+            .nome{
+                font-size: 30px;
+                color: #00A3FF;
+                font-weight: bold;
+                margin: 10px 0px 20px 0px;
+            }
+            .desc{
+                width: 350px;
+                line-height: 1.5em;
+                background-color: #EDEDED;
+                color: #878787;
+                border-radius: 10px;
+                padding: 20px;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.servicos{
+    background-color:#90E8FC;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px repeat(4, 1fr) 200px;
+    grid-template-areas: 
+    "titulo . ."
+    ". serv1 serv1"
+    "serv2 serv2 ."
+    ". serv3 serv3"
+    "serv4 serv4 ."
+    ". . .";
+    .titulo{
+        font-size: 80px;
+        color: white;
+        grid-area: titulo;
+        font-weight: 900;
+        align-self: end;
+        margin-left: 30px;
+    }
+    .serv{
+        margin: 0px 30px 0px 30px;
+        &:nth-child(2n){
+            h1{
+                text-align: right;
+            }
+            p{
+                align-self: end;
+            }
+        }
+        h1{
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+        }
+        p{
+            font-size: 22px;
+            text-align: justify;
+            color: white;
+            width: 80%;
+        }
+    }
+    .serv1{
+        grid-area: serv1;
+    }
+    .serv2{
+        grid-area: serv2;
+    }
+    .serv3{
+        grid-area: serv3;
+    }
+    .serv4{
+        grid-area: serv4;
+    }
+}
