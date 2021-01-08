@@ -76,7 +76,7 @@ nav{
         color: #878787;
     }
     .img{
-        background-image: url(http://127.0.0.1:5500/advex.jpg);
+        background-image: url(advex.jpg);
         background-position: center;
         background-size: cover;
         border-radius: 100%;
@@ -104,6 +104,7 @@ nav{
     display: flex;
     justify-content: space-around;
     background-image: -webkit-linear-gradient(90deg, #fff 80%, #90E8FC 80%);
+    margin-bottom: 60px;
     .adv{
 
         &1{
@@ -168,10 +169,10 @@ nav{
 }
 
 .servicos{
-    background-color:#90E8FC;
+    background-image: -webkit-linear-gradient(262deg, #fff 15%, #90E8FC 15%);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px repeat(4, 1fr) 200px;
+    grid-template-rows: 270px repeat(4, 1fr) 200px;
     grid-template-areas: 
     "titulo . ."
     ". serv1 serv1"
@@ -179,6 +180,7 @@ nav{
     ". serv3 serv3"
     "serv4 serv4 ."
     ". . .";
+    padding: 60px 60px 0px 60px;
     .titulo{
         font-size: 80px;
         color: white;
@@ -186,15 +188,18 @@ nav{
         font-weight: 900;
         align-self: end;
         margin-left: 30px;
+        margin-bottom: 80px;
     }
     .serv{
-        margin: 0px 30px 0px 30px;
+        margin: 0px 30px -140px 30px;
+        padding-top: 100px;
         &:nth-child(2n){
             h1{
                 text-align: right;
             }
             p{
                 align-self: end;
+                float: right;
             }
         }
         h1{
@@ -206,7 +211,7 @@ nav{
             font-size: 22px;
             text-align: justify;
             color: white;
-            width: 80%;
+            width: 450px;
         }
     }
     .serv1{
